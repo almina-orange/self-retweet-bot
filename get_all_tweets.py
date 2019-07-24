@@ -7,11 +7,13 @@ from twitter_func import get_user_timeline
 
 def main():
 
+    SN = os.environ.get('SECRET_NAME','')
+
     ### First access
     twitter = connect_sess()
     params = {
         'count': 100,
-        'screen_name': 'Code4_11',
+        'screen_name': SN,
         'tweet_mode': 'extended',  # to get full-text
     }
     timelines = get_user_timeline(twitter, params)

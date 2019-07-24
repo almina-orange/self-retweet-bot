@@ -10,6 +10,8 @@ from twitter_func import post_unretweet
 
 def main():
 
+    SN = os.environ.get('SECRET_NAME','')
+
     ### Choice tweet randomly
     with open('work.json', 'r') as f:
         data = json.load(f)

@@ -4,6 +4,8 @@ from requests_oauthlib import OAuth1Session
 
 def main():
 
+    SN = os.environ.get('SECRET_NAME','')
+
     ### Load all tweet from log file
     with open('out.json', 'r') as f:
         data = json.load(f)
@@ -28,8 +30,8 @@ def main():
         """
 
         hashtags = d['entities']['hashtags']
-        is_self_reply = d['in_reply_to_screen_name'] == config.SCREEN_NAME
-        is_self_retweet = d['retweeted'] and (not d['retweeted_status']['user']['screen_name'] == config.SCREEN_NAME)
+        is_self_reply = d['in_reply_to_screen_name'] == SN
+        is_self_retweet = d['retweeted'] and (not d['retweeted_status']['user']['screen_name'] == SN)
         if len(hashtags) > 0 and (not is_self_retweet) and (not is_self_reply):
             tag = hashtags[0]['text']
             if tag in search_tags:
