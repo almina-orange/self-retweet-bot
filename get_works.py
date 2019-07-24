@@ -26,19 +26,21 @@ def main():
         """Pick up on the condition that...
         * specific hashtag is attached
         * not reply for myself
-        * not retweet of myself
+        * not retweet of other
         """
 
         hashtags = d['entities']['hashtags']
         is_self_reply = d['in_reply_to_screen_name'] == SN
-        is_self_retweet = d['retweeted'] and (not d['retweeted_status']['user']['screen_name'] == SN)
-        if len(hashtags) > 0 and (not is_self_retweet) and (not is_self_reply):
+        is_other_retweet = False
+        if d['retweeted']:
+            is_self_retweet = not d['retweeted_status']['user']['screen_name'] == SN
+
+        if len(hashtags) > 0 and (not is_other_retweet) and (not is_self_reply):
             tag = hashtags[0]['text']
             if tag in search_tags:
-                print('id: ' + d['id_str'])
-                print('text: \n' + d['full_text'])
-                print('------')
-
+                # print('id: ' + d['id_str'])
+                # print('text: \n' + d['full_text'])
+                # print('------')
                 all_works['id'].append(d['id'])
 
     print("------------------------------------")
