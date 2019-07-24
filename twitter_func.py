@@ -10,9 +10,9 @@ def connect_sess():
     """ Connect session """
 
     # auth key
-    CX = os.environ.get('CONSUMER_KEY','')
-    CS = os.environ.get('CONSUMER_SECRET','')
-    AT = os.environ.get('ACCESS_TOKEN','')
+    CX  = os.environ.get('CONSUMER_KEY','')
+    CS  = os.environ.get('CONSUMER_SECRET','')
+    AT  = os.environ.get('ACCESS_TOKEN','')
     ATS = os.environ.get('ACCESS_TOKEN_SECRET','')
 
     # connection
