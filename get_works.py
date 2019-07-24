@@ -33,7 +33,7 @@ def main():
         is_self_reply = d['in_reply_to_screen_name'] == SN
         is_other_retweet = False
         if d['retweeted']:
-            is_self_retweet = not d['retweeted_status']['user']['screen_name'] == SN
+            is_other_retweet = not d['retweeted_status']['user']['screen_name'] == SN
 
         if len(hashtags) > 0 and (not is_other_retweet) and (not is_self_reply):
             tag = hashtags[0]['text']
