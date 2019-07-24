@@ -1,7 +1,7 @@
 """ Functions for twitter API """
 
 import random
-import json, config
+import json, os
 from requests_oauthlib import OAuth1Session
 
 
@@ -10,10 +10,10 @@ def connect_sess():
     """ Connect session """
 
     # auth key
-    CX = config.CONSUMER_KEY
-    CS = config.CONSUMER_SECRET
-    AT = config.ACCESS_TOKEN
-    ATS = config.ACCESS_TOKEN_SECRET
+    CX = os.environ.get('CONSUMER_KEY','')
+    CS = os.environ.get('CONSUMER_SECRET','')
+    AT = os.environ.get('ACCESS_TOKEN','')
+    ATS = os.environ.get('ACCESS_TOKEN_SECRET','')
 
     # connection
     return OAuth1Session(CX, CS, AT, ATS)

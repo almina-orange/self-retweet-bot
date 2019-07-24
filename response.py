@@ -8,10 +8,6 @@ CX = os.environ.get('CONSUMER_KEY','')
 CS = os.environ.get('CONSUMER_SECRET','')
 AT = os.environ.get('ACCESS_TOKEN','')
 ATS = os.environ.get('ACCESS_TOKEN_SECRET','')
-# CX = config.CONSUMER_KEY
-# CS = config.CONSUMER_SECRET
-# AT = config.ACCESS_TOKEN
-# ATS = config.ACCESS_TOKEN_SECRET
 
 # connect
 twitter = OAuth1Session(CX, CS, AT, ATS)

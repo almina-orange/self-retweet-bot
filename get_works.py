@@ -1,4 +1,4 @@
-import json, config
+import json, os
 from requests_oauthlib import OAuth1Session
 
 
