@@ -15,7 +15,7 @@ def job_everyweek():
 
 def job_everyday():
 
-    post.self_retweet()
+    post_self_retweet.main()
 
 
 def main():
