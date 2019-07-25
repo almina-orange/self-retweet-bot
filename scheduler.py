@@ -20,9 +20,10 @@ def job_everyday():
 
 def main():
     # schedule.every().sunday.do(job_everyweek)
-    # schedule.every().day.at("18:00").do(job_everyday)
+    # schedule.every().day.at("16:00").do(job_everyday)
 
-    schedule.every(1).minutes.do(job_everyday)
+    schedule.every(1).minutes.do(job_everyweek)
+    # schedule.every(1).minutes.do(job_everyday)
 
 
     # #10分毎にjobを実行
