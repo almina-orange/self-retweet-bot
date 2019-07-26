@@ -40,7 +40,7 @@ def job_everyminute():
 
 def main():
     schedule.every().sunday.do(job_everyweek)
-    schedule.every().day.at("16:00").do(job_everyday)
+    schedule.every().day.at("7:00").do(job_everyday)
     schedule.every().hour.do(job_everyhour)
 
     # schedule.every(1).minutes.do(job_everyweek)
