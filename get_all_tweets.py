@@ -4,6 +4,8 @@ from requests_oauthlib import OAuth1Session
 from twitter_func import connect_sess
 from twitter_func import get_user_timeline
 
+from LINE_notify import post_line_notify
+
 
 def main():
 
@@ -35,6 +37,10 @@ def main():
     ### Save
     with open('out.json', 'w') as f:
         json.dump(all_tweets, f, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
+
+
+    ### Post to LINE-Notify
+    post_line_notify('Updated all tweet file.')
 
 
 if __name__ == "__main__":

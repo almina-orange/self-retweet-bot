@@ -1,6 +1,8 @@
 import json, os
 from requests_oauthlib import OAuth1Session
 
+from LINE_notify import post_line_notify
+
 
 def main():
 
@@ -50,6 +52,10 @@ def main():
     ### Save id list
     with open('work.json', 'w') as f:
         json.dump(all_works, f, ensure_ascii=False, indent=4, sort_keys=True, separators=(',', ': '))
+
+
+    ### Post to LINE-Notify
+    post_line_notify('Updated all works file.')
 
 
 if __name__ == "__main__":
