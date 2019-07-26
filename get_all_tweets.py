@@ -30,8 +30,8 @@ def main():
         params['max_id'] = timelines[len(timelines) - 1]['id'] - 1
         timelines = get_user_timeline(twitter, params)
 
-    print("------------------------------------")
-    print('all_tweets: ' + str(len(all_tweets)))
+    # print("------------------------------------")
+    # print('all_tweets: ' + str(len(all_tweets)))
 
 
     ### Save

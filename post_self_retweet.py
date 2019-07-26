@@ -40,8 +40,8 @@ def main():
         post_unretweet(twitter, {'id': tar_id})
 
 
-    # ### Self-retweet
-    # post_retweet(twitter, {'id': tar_id})
+    ### Self-retweet
+    post_retweet(twitter, {'id': tar_id})
 
 
     ### Post to LINE-Notify

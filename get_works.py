@@ -45,8 +45,8 @@ def main():
                 # print('------')
                 all_works['id'].append(d['id'])
 
-    print("------------------------------------")
-    print("all_works: " + str(len(all_works['id'])))
+    # print("------------------------------------")
+    # print("all_works: " + str(len(all_works['id'])))
 
 
     ### Save id list
