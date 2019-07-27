@@ -32,13 +32,22 @@ def hours_job():
     post_line_notify('everyhour')
 
 
+def minutes_job():
+
+    ### Post to LINE-Notify
+    post_line_notify('every 30 minutes')
+
+
 def main():
 
     sched = BlockingScheduler()
 
+    sched.add_job(minutes_job, 'interval', minutes=10)
     sched.add_job(hours_job, 'interval', hours=1)
-    sched.add_job(day_job, 'cron', hour=7)
+    sched.add_job(day_job, 'cron', hour=8)
     sched.add_job(week_job, 'cron', day_of_week='sun')
+
+    sched.start()
 
 
 if __name__ == "__main__":
