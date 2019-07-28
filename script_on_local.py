@@ -8,7 +8,8 @@ def main():
 
 
     ### Main job
-    os.system('python get_all_tweets.py')
+    # os.system('python get_all_tweets.py')
+    os.system('python get_works.py')
 
 
 if __name__ == "__main__":

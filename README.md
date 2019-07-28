@@ -68,6 +68,14 @@
         main()
     ```
 
+* 探索対象とするハッシュタグを `tags.json` で設定
+
+    ```json
+    [
+        "hashtag",
+        ...
+    ]
+
 * 定期実行を `scheduler.py` で設定
 
     ```python

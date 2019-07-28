@@ -15,13 +15,8 @@ def main():
 
     ### Pickup only work tweet
     all_works = {'id': []}
-    search_tags = [
-        'creativecoding', \
-        'openframeworks', \
-        'glsl', \
-        'generative', \
-        'generativeart' \
-    ]
+    with open('tags.json', 'r') as f:
+        search_tags = json.load(f)
 
     for d in data:
 

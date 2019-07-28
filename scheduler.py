@@ -24,6 +24,14 @@ def day_job():
 
 def main():
 
+    ### Initial process
+
+    os.system('python get_all_tweets.py')
+    os.system('python works.py')
+
+
+    ### Set scheduler
+
     sched = BlockingScheduler()
 
     sched.add_job(day_job, 'cron', hour=8)
