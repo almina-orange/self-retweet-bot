@@ -29,6 +29,7 @@
 ├── post_self_retweet.py    # post self-retweet to target tweet
 ├── post_all_unretweet.py   # reset all self-retweet
 ├── script_on_local.py      # script on local
+├── tags.json               # search tags list
 ├── out.json                # all tweets
 └── work.json               # all target tweets
 ```
