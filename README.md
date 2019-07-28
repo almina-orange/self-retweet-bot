@@ -37,14 +37,14 @@
 
     ```sh
     # Twitter api key
-    CONSUMER_KEY="N7jWmgCNfpxppcY5ZFa4Urou9"
-    CONSUMER_SECRET="3lxaJ043KFPMJlLSV0M32fbzuoKTJmwHlcizfkDHFLJI68LxYX"
-    ACCESS_TOKEN="3149630647-rOnv0SSTYp8c61n3KpmKfDjoUlqaxcmlswQznc1"
-    ACCESS_TOKEN_SECRET="8bcAQM55PGEbWxqlfFo8AwMQzOtAnEsakCKVhxAy702Za"
-    SCREEN_NAME="Code4_11"
+    CONSUMER_KEY="******"
+    CONSUMER_SECRET="******"
+    ACCESS_TOKEN="******"
+    ACCESS_TOKEN_SECRET="******"
+    SCREEN_NAME="******"
 
     # LINE Notify api key
-    LINE_NOTIFY_ACCESS_TOKEN="JPM2AWZ6sGgVRUbOYk00wtbmSq3ld7yKUijxHJFSOpe"
+    LINE_NOTIFY_ACCESS_TOKEN="******"
     ```
 
 * ローカル環境で実行する際には `dotenv` で `.env` を読み込むˇ
