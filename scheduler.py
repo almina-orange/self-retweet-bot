@@ -27,7 +27,7 @@ def main():
     ### Initial process
 
     os.system('python get_all_tweets.py')
-    os.system('python works.py')
+    os.system('python get_works.py')
 
 
     ### Set scheduler
