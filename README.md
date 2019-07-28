@@ -73,8 +73,8 @@
     ```json
     [
         "hashtag",
-        ...
     ]
+    ```
 
 * 定期実行を `scheduler.py` で設定
 
